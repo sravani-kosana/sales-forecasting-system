@@ -1,0 +1,92 @@
+{
+  "best_model": "Ridge",
+  "trained_until": "2026-09-30",
+  "train_rows": 1250,
+  "test_days": 120,
+  "backtest": {
+    "horizon_days": 30,
+    "origins": 3
+  },
+  "models": {
+    "SeasonalNaive": {
+      "one_step": {
+        "mae": 158494.13,
+        "rmse": 192720.39,
+        "mape": 6.48,
+        "r2": 0.6936
+      },
+      "recursive": {
+        "mae": 170035.61,
+        "rmse": 209097.58,
+        "mape": 6.71,
+        "r2": 0.6246
+      }
+    },
+    "Ridge": {
+      "one_step": {
+        "mae": 118397.02,
+        "rmse": 150393.68,
+        "mape": 4.88,
+        "r2": 0.8134
+      },
+      "recursive": {
+        "mae": 121331.52,
+        "rmse": 154455.59,
+        "mape": 4.83,
+        "r2": 0.7952
+      }
+    },
+    "RandomForest": {
+      "one_step": {
+        "mae": 136403.4,
+        "rmse": 178104.0,
+        "mape": 5.64,
+        "r2": 0.7383
+      },
+      "recursive": {
+        "mae": 122721.72,
+        "rmse": 158416.6,
+        "mape": 4.89,
+        "r2": 0.7845
+      }
+    },
+    "GradientBoosting": {
+      "one_step": {
+        "mae": 146235.48,
+        "rmse": 183144.74,
+        "mape": 6.12,
+        "r2": 0.7233
+      },
+      "recursive": {
+        "mae": 126668.39,
+        "rmse": 159278.82,
+        "mape": 5.08,
+        "r2": 0.7822
+      }
+    }
+  },
+  "feature_importance": {
+    "roll_mean_7": 0.2208,
+    "is_weekend": 0.2174,
+    "lag_364": 0.1302,
+    "quarter": 0.0836,
+    "t": 0.0545,
+    "doy_cos": 0.0476,
+    "roll_mean_28": 0.0471,
+    "promo_share": 0.0298,
+    "lag_1": 0.0291,
+    "doy_sin": 0.0282,
+    "dayofyear": 0.0254,
+    "weekofyear": 0.0184,
+    "dow_cos": 0.0173,
+    "lag_28": 0.0124,
+    "lag_14": 0.0115,
+    "is_month_start": 0.0071,
+    "month": 0.0069,
+    "day": 0.0051,
+    "dow_sin": 0.0026,
+    "lag_7": 0.0025,
+    "is_month_end": 0.0017,
+    "dayofweek": 0.0005
+  }
+}
